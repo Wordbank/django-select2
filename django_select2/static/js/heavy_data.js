@@ -43,8 +43,8 @@ if (!window['django_select2']) {
 		},
 		prepareValText: function (vals, txts, isMultiple) {
 			var data = []
-			$(vals).each(function (index) {
-				data.push({id: this, text: txts[index]});
+			$(vals).each(function (index, val) {
+				data.push({id: val, text: txts[index]});
 			});
 			if (isMultiple) {
 				return data;
